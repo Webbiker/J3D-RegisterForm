@@ -21,33 +21,33 @@
 		<div class="container">
 			<div class="row">
 				<header class="col-sm-12">			
-					<h1>Hello, world!</h1>
+					<h1>Jeugd 3 Daagse 2017 Inschrijfformulier</h1>
 				</header>
 			</div>
 			<div class="row">
 				<section class="col-xs-12 col-sm-9 col-sm-push-3">
-					<form action="/" method="POST" id="register" name="register">
+					<form action="/" method="POST" id="registerChild" name="registerChild">
 						<div class="form-group">
-							<label for="naam">Voor- en achternaam kind:</label>
-							<input type="text" class="form-control" id="naam" placeholder="">
+							<label for="namechild">Voor- en achternaam kind:</label>
+							<input type="text" class="form-control" id="namechild" placeholder="" required="">
 						</div>
 						<div class="form-group">
 							<label class="radio-inline">
-								<input type="radio" name="geslacht" id="geslachtJongen" value="j"> Jongen
+								<input type="radio" name="gender" id="geslachtJongen" value="j" required=""> Jongen
 							</label>
 							<label class="radio-inline">
-								<input type="radio" name="geslacht" id="geslachtMeisje" value="m"> Meisje
+								<input type="radio" name="gender" id="geslachtMeisje" value="m" required=""> Meisje
 							</label>
 						</div>
 						<div class="form-group">
 							<label for="adres">Straatnaam en huisnummer</label>
-							<input type="text" class="form-control" id="adres" placeholder="">
+							<input type="text" class="form-control" id="adres" placeholder="" required="">
 						</div>
 						<div class="form-group">
 							<label for="geboortedatum">Geboortedatum</label>
 							<div class="row">
-								<div class="col-xs-12 col-sm-3">
-									<select name="bday" id="bday" class="form-control">
+								<div class="col-xs-12 col-sm-2">
+									<select name="bday" id="bday" class="form-control" required="">
 										<option value="">Dag</option>
 										<option value="1">1</option>
 										<option value="2">2</option>
@@ -82,13 +82,81 @@
 										<option value="31">31</option>
 									</select>
 								</div>
-								<div class="col-xs-12 col-sm-3">
-									<input type="text" class="form-control" placeholder="">
-								</div>
 								<div class="col-xs-12 col-sm-4">
-									<input type="text" class="form-control" placeholder="">
+									<select class="form-control" id="bmonth" name="bmonth" required="">
+										<option value="">Maand</option>
+										<option value="1">Januari</option>
+										<option value="2">Februari</option>
+										<option value="3">Maart</option>
+										<option value="4">April</option>
+										<option value="5">Mei</option>
+										<option value="6">Juni</option>
+										<option value="7">Juli</option>
+										<option value="8">Augustus</option>
+										<option value="9">September</option>
+										<option value="10">Oktober</option>
+										<option value="11">November</option>
+										<option value="12">December</option>
+									</select>
+								</div>
+								<div class="col-xs-12 col-sm-3">
+									<select class="form-control" name="byear" id="byear" required="">
+										<option value="">Jaar</option>
+										<?php 
+											$maxyear = 2013;
+											$range = $maxyear - 20;
+											for ($i = $maxyear; $i > $range; $i--){
+												echo '<option value="'.$i.'">'.$i.'</option>';
+											}
+										?>
+									</select>
 								</div>
 							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6">
+									<label for="phone">Telefoonnummer ouders</label>
+									<input type="text" class="form-control" name="phone" id="phone" placeholder="" required="">
+								</div>
+								<div class="col-xs-12 col-sm-6">
+									<label for="email">E-mailadres ouders</label>
+									<input type="text" class="form-control" name="email" id="email" placeholder="" required="">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<label>In welke groep en op welke school zit uw kind?</label>
+							<div class="row">
+								<div class="col-xs-12 col-sm-2">
+									<label for="groep">Groep</label>
+									<input type="text" class="form-control" id="groep" placeholder="" required="">
+								</div>	
+								<div class="col-xs-12 col-sm-6">
+									<label for="school">van basisschool</label>
+									<select class="form-control" name="school" id="school" required="">
+										<option value=""></option>
+										<option value="Brukelum">Brukelum</option>
+										<option value="Driehoek">Driehoek</option>
+										<option value="Heindert">De Heindert</option>
+									</select>
+								</div>							
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="opmerkingen">Bijzonderheden m.b.t. medicijnen, allergieën, dieet, relevante indicaties (i.v.m. juiste leiding), e.d.</label>
+							<textarea name="opmerkingen" id="opmerkingen" class="form-control" rows="5"></textarea>
+						</div>
+						<div class="form-group">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6">
+									<label for="voorkeur">Bij voorkeur in het groepje bij</label>
+									<input type="text" class="form-control" name="voorkeur" id="voorkeur">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-primary btn-lg">Registreren</button>
 						</div>
 					</form>
 				</section>
@@ -100,7 +168,9 @@
 
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
 		<!-- Include all compiled plugins (below), or include individual files as needed -->
 		<script src="/assets/js/bootstrap.min.js"></script>
+		<script src="/assets/js/build/app.min.js"></script>
 	</body>
 </html>
