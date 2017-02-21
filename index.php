@@ -9,6 +9,7 @@
 
 		<!-- Bootstrap -->
 		<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/assets/css/screen.css" rel="stylesheet">
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,16 +21,20 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<header class="col-sm-12">			
-					<h1>Jeugd 3 Daagse 2017 Inschrijfformulier</h1>
-				</header>
-			</div>
-			<div class="row">
 				<section class="col-xs-12 col-sm-9 col-sm-push-3">
 					<form action="/" method="POST" id="registerChild" name="registerChild">
+						<h1>Inschrijfformulier</h1>
+<!-- 						<div class="alert alert-danger alert-dismissible" role="alert" id="alert">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<ul></ul>
+						</div> -->
+						<div class="alert alert-danger alert-dismissible" role="alert" id="warning">
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<div></div>
+						</div>
 						<div class="form-group">
-							<label for="namechild">Voor- en achternaam kind:</label>
-							<input type="text" class="form-control" id="namechild" placeholder="" required="">
+							<label class="control-label" for="namechild">Voor- en achternaam kind:</label>
+							<input type="text" class="form-control" name="namechild" id="namechild" placeholder="" required="">
 						</div>
 						<div class="form-group">
 							<label class="radio-inline">
@@ -40,11 +45,11 @@
 							</label>
 						</div>
 						<div class="form-group">
-							<label for="adres">Straatnaam en huisnummer</label>
-							<input type="text" class="form-control" id="adres" placeholder="" required="">
+							<label class="control-label" for="adres">Straatnaam en huisnummer</label>
+							<input type="text" class="form-control" name="adres" id="adres" placeholder="" required="">
 						</div>
 						<div class="form-group">
-							<label for="geboortedatum">Geboortedatum</label>
+							<label class="control-label" for="geboortedatum">Geboortedatum</label>
 							<div class="row">
 								<div class="col-xs-12 col-sm-2">
 									<select name="bday" id="bday" class="form-control" required="">
@@ -116,11 +121,11 @@
 						<div class="form-group">
 							<div class="row">
 								<div class="col-xs-12 col-sm-6">
-									<label for="phone">Telefoonnummer ouders</label>
+									<label class="control-label" for="phone">Telefoonnummer ouders</label>
 									<input type="text" class="form-control" name="phone" id="phone" placeholder="" required="">
 								</div>
 								<div class="col-xs-12 col-sm-6">
-									<label for="email">E-mailadres ouders</label>
+									<label class="control-label" for="email">E-mailadres ouders</label>
 									<input type="text" class="form-control" name="email" id="email" placeholder="" required="">
 								</div>
 							</div>
@@ -129,11 +134,15 @@
 							<label>In welke groep en op welke school zit uw kind?</label>
 							<div class="row">
 								<div class="col-xs-12 col-sm-2">
-									<label for="groep">Groep</label>
-									<input type="text" class="form-control" id="groep" placeholder="" required="">
-								</div>	
+									<label class="control-label" for="groep">Groep</label>
+									<input type="text" class="form-control" name="groep" id="groep" placeholder="" required="">
+								</div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="row">
 								<div class="col-xs-12 col-sm-6">
-									<label for="school">van basisschool</label>
+									<label class="control-label" for="school">van basisschool</label>
 									<select class="form-control" name="school" id="school" required="">
 										<option value=""></option>
 										<option value="Brukelum">Brukelum</option>
@@ -161,7 +170,7 @@
 					</form>
 				</section>
 				<aside class="col-xs-12 col-sm-3 col-sm-pull-9">
-					Sidebar
+					<h1>J3D</h1>
 				</aside>
 			</div>
 		</div>
