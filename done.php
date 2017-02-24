@@ -5,15 +5,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-		<title>Inschrijfformulier - Jeugd3Daagse Aarle-Rixtel</title>
+		<title>Bootstrap 101 Template</title>
 
 		<!-- Bootstrap -->
 		<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 		<link href="/assets/css/screen.css" rel="stylesheet">
-
-		<link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon" />
-
-
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,12 +21,9 @@
 	<body>
 		<div class="container">
 			<div class="row">
-				<aside class="col-xs-12 col-sm-3">
-					<h1>Jeugd3Daagse Aarle-Rixtel</h1>
-				</aside>
-				<section class="col-xs-12 col-sm-9">
-					<form action="/controller.php" method="POST" id="registerChild" name="registerChild">
-						<h1>Inschrijfformulier</h1>
+				<section class="col-xs-12 col-sm-9 col-sm-push-3">
+					<h1>Bedankt</h1>
+<!-- 					<form action="/controller.php" method="POST" id="registerChild" name="registerChild">
 						<div class="alert alert-danger alert-dismissible" role="alert" id="warning">
 							<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 							<div></div>
@@ -168,11 +161,14 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<button type="submit" class="btn btn-primary btn-lg">Inschrijven</button>
-							<a href="javascript:fillForm();" class="right">Prefill</a>
+							<button type="submit" class="btn btn-primary btn-lg">Registreren</button>
+							<a href="javascript:fillForm();">Prefill</a>
 						</div>
-					</form>
+					</form> -->
 				</section>
+				<aside class="col-xs-12 col-sm-3 col-sm-pull-9">
+					<h1>J3D</h1>
+				</aside>
 			</div>
 		</div>
 

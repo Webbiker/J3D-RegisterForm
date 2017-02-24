@@ -105,3 +105,18 @@ function validateUnhighlight(element, errorClass, validClass){
 	var elemName = $(element).prop("name");
 	$("[name="+elemName+"]").closest('.form-group').addClass("has-success").removeClass("has-error");
 }
+
+function fillForm(){
+	$("#namechild").val("Maud Brommert");
+	$("#geslachtMeisje").attr('checked', true);;
+	$("#adres").val("Helmondseweg 1");
+	$("#bday").val("14");
+	$("#bmonth").val("12");
+	$("#byear").val("2010");
+	$("#phone").val("0624863847");
+	$("#email").val("info@webbiker.nl");
+	$("#groep").val("3");
+	$("#school").val("Brukelum");
+	$("#opmerkingen").val("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea tenetur odit, voluptatibus ullam perferendis molestias a unde aliquid, porro excepturi doloremque quam dolor sint, suscipit eos saepe tempore? Temporibus, odio.");
+	$("#voorkeur").val("Valerie");
+}
