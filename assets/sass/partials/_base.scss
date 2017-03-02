@@ -1,12 +1,12 @@
 body {
-	background-image: url(/assets/img/header.jpg);
+	background-image: url(/assets/img/header-j3d-01.jpg);
 	background-repeat: no-repeat;
 	background-position: top center;
 	// background-size: cover;
 }
 
-form {
-	margin: 30px 0 40px 0;
+.form {
+	margin: 275px 0 40px 0;
 	padding: 10px 25px !important;
 	background: rgba(255,255,255,0.9);
 	// border-radius: 20px;
@@ -26,14 +26,45 @@ form {
 	}
 }
 
-aside {
-	h1 {
-		background-image: url(/assets/img/j3d-logo.svg);
-		background-repeat: no-repeat;
-		background-position: top center;
-		min-height: 220px;
-		text-indent: -9999px;
+.indent {
+	display: inline-block;
+    margin-left: 24px;
+}
+
+.disabled {
+	color: #CCC;
+}
+
+.label--secondary {
+	font-weight: normal;
+}
+
+.checkbox--withinput {
+	padding-right: 18px;
+	input[type='checkbox'] {
+		top: 0;
 	}
+	input[type='text']{
+		margin:0 18px;
+	}
+	
+}
+
+.container {
+	position: relative;
+}
+
+.logo {
+	background-image: url(/assets/img/j3d-logo.svg);
+	background-repeat: no-repeat;
+	background-position: top center;
+	min-height: 270px;
+	text-indent: -9999px;
+	position: absolute;
+	z-index: 10;
+	right: 10px;
+	top: 50px;
+	transform: rotate(15deg);
 }
 
 .alert {

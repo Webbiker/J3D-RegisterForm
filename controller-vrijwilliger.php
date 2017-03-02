@@ -1,5 +1,10 @@
 <?php
-	// print "<pre>"; print_r($_POST); print "</pre>";
+	session_start();
+	$temp = $_SESSION['POST'];
+	unset($_SESSION['POST']);
+
+	// print "<pre>"; print_r($temp['namechild']); print "</pre>";
+	// print "<pre>"; print_r($_POST); print "</pre>"; exit;
 
 	// This function will run within each post array including multi-dimensional arrays 
 	function ExtendedAddslash(&$params)
@@ -12,16 +17,29 @@
 	 // Initialize ExtendedAddslash() function for every $_POST variable
 	ExtendedAddslash($_POST);      
 
-	$namechild = $_POST['namechild']; 
-	$gender = $_POST['gender']; 
+	$name = $_POST['name']; 
 	$adres = $_POST['adres']; 
-	$birthday = $_POST['bday'] . '-' . $_POST['bmonth'] . '_' . $_POST['byear']; 
 	$phone = $_POST['phone']; 
 	$email = $_POST['email']; 
-	$groep = $_POST['groep']; 
-	$school = $_POST['school']; 
-	$opmerkingen = $_POST['opmerkingen']; 
-	$voorkeur = $_POST['voorkeur']; 
+
+	$groepOnderbouw = $_POST['groepOnderbouw']; 
+	$groepBovenbouw = $_POST['groepBovenbouw']; 
+	$overnachten = $_POST['overnachten']; 
+
+	$metEigenKind = $_POST['metEigenKind']; 
+	$metEigenKindNaam = $temp['namechild']; 
+
+	$leidingsamenmet = $_POST['leidingsamenmet']; 
+
+	$dag1 = $_POST['dag1']; 
+	$dag2 = $_POST['dag2']; 
+	$dag3 = $_POST['dag3']; 
+
+	$creatiefspel = $_POST['creatiefspel']; 
+	$sportiefspel = $_POST['sportiefspel']; 
+	$spelgeenvoorkeur= $_POST['spelgeenvoorkeur']; 
+	$anderevoorkeur = $_POST['voorkeur']; 
+	$daghulpsamenmet = $_POST['daghulpsamenmet']; 
 
 	$db_host = 'localhost';
 	$db_username = 'j3d_user';
@@ -46,35 +64,48 @@
 	    // You might want to show them something nice, but we will simply exit
 	    exit;
 	}
-	$sql = "	INSERT INTO `inschrijvingen` (
-					`namechild`, 
-					`gender`, 
+	$sql = "	INSERT INTO `vrijwilligers` (
+					`name`, 
 					`adres`, 
-					`birthday`, 
 					`phone`, 
 					`email`, 
-					`groep`, 
-					`school`, 
-					`opmerkingen`, 
-					`voorkeur`
+					`groepOnderbouw`, 
+					`groepBovenbouw`, 
+					`overnachten`, 
+					`metEigenKind`,
+					`metEigenKindNaam`, 
+					`leidingsamenmet`, 
+					`dag1`, 
+					`dag2`, 
+					`dag3`, 
+					`creatiefspel`, 
+					`sportiefspel`, 
+					`spelgeenvoorkeur`, 
+					`anderevoorkeur`, 
+					`daghulpsamenmet`
 				) VALUES (
-					'" . $namechild . "', 
-					'" . $gender . "', 
+					'" . $name . "', 
 					'" . $adres . "', 
-					'" . $birthday . "', 
 					'" . $phone . "', 
-					'" . $email ."', 
-					'" . $groep ."', 
-					'" . $school . "', 
-					'" . $opmerkingen ."', 
-					'" . $voorkeur . "'
+					'" . $email . "', 
+					'" . $groepOnderbouw . "', 
+					'" . $groepBovenbouw ."', 
+					'" . $overnachten ."', 
+					'" . $metEigenKind . "', 
+					'" . $metEigenKindNaam ."', 
+					'" . $leidingsamenmet . "',
+					'" . $dag1 . "',
+					'" . $dag2 . "',
+					'" . $dag3 . "',
+					'" . $creatiefspel . "',
+					'" . $sportiefspel . "',
+					'" . $spelgeenvoorkeur . "',
+					'" . $anderevoorkeur . "',
+					'" . $daghulpsamenmet . "'
 				);";
 	// echo $sql;
 	$mysqli->query($sql);
 	$mysqli->close();
 
-	session_start();
-	$_SESSION['POST'] = $_POST;
-
-	header("Location: vrijwilliger.php");
+	header("Location: done.php");
 ?>
