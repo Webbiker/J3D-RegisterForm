@@ -72,63 +72,61 @@
 	</div>
 
 	<div class="form-group">
-		<p><strong>Je voorkeur als daghulp</strong></p>
-		<div class="row">
-			<div class="col-xs-12 col-sm-4">							
+		<div class="row" id="dagdelen">
+			<div class="col-xs-12 col-sm-6">							
+				<p><strong>Je voorkeur als daghulp</strong></p>
 				<div class="checkbox">
-					<label for="dag1">
-						<input type="checkbox" name="dag1" id="dag1" value="1"> Dinsdag 30 Augustus
+					<label for="dagMa">
+						<input type="checkbox" name="dagMa" id="dagMa" value="1"> Maandag 21 Augustus (opbouw)
 					</label>
 				</div>
 				<div class="checkbox">
-					<label for="dag2">
-						<input type="checkbox" name="dag2" id="dag2" value="1"> Woensdag 31 Augustus
+					<label for="dagDi">
+						<input type="checkbox" name="dagDi" id="dagDi" value="1"> Dinsdag 22 Augustus
 					</label>
 				</div>
 				<div class="checkbox">
-					<label for="dag3">
-						<input type="checkbox" name="dag3" id="dag3" value="1"> Donderdag 1 September
+					<label for="dagDiAaf">
+						<input type="checkbox" name="dagDiAaf" id="dagDiAaf" value="1"> Dinsdag 22 Augustus (avond)
+					</label>
+				</div>
+				<div class="checkbox">
+					<label for="dagWo">
+						<input type="checkbox" name="dagWo" id="dagWo" value="1"> Woensdag 23 Augustus
+					</label>
+				</div>
+				<div class="checkbox">
+					<label for="dagDo">
+						<input type="checkbox" name="dagDo" id="dagDo" value="1"> Donderdag 24 Augustus
+					</label>
+				</div>
+				<div class="checkbox">
+					<label for="dagVr">
+						<input type="checkbox" name="dagVr" id="dagVr" value="1"> Vrijdag 25 Augustus (afbreken)
 					</label>
 				</div>
 			</div>
-			<div class="col-xs-12 col-sm-4">
+			<div class="col-xs-12 col-sm-6">							
+				<p><strong>Je voorkeur als groepsleiding</strong></p>
 				<div class="checkbox">
-					<label for="creatiefspel">
-						<input type="checkbox" name="creatiefspel" id="creatiefspel" value="1"> Bij creatief spel
-					</label>
-				</div>
-				<div class="checkbox">
-					<label for="sportiefspel">
-						<input type="checkbox" name="sportiefspel" id="sportiefspel" value="1"> Bij sportief spel
+					<label for="groepDi">
+						<input type="checkbox" name="groepDi" id="groepDi" value="1"> Dinsdag 22 Augustus
 					</label>
 				</div>
 				<div class="checkbox">
-					<label for="spelgeenvoorkeur">
-						<input type="checkbox" name="spelgeenvoorkeur" id="spelgeenvoorkeur" value="1"> Bij spel maar geen voorkeur
+					<label for="groepDiAaf">
+						<input type="checkbox" name="groepDiAaf" id="groepDiAaf" value="1"> Dinsdag 22 Augustus (avond)
 					</label>
 				</div>
-			</div>
-			<div class="col-xs-12 col-sm-4">
 				<div class="checkbox">
-					<label for="geenvoorkeur">
-						<input type="checkbox" name="geenvoorkeur" id="geenvoorkeur" value="1"> Geen voorkeur
+					<label for="groepWo">
+						<input type="checkbox" name="groepWo" id="groepWo" value="1"> Woensdag 23 Augustus
 					</label>
 				</div>
-				<div class="checkbox checkbox--withinput">
-					<label for="anderevoorkeur" style="width: 100%;">
-						<input type="checkbox" name="anderevoorkeur" id="anderevoorkeur" value="1"> Andere voorkeur:
+				<div class="checkbox">
+					<label for="groepDo">
+						<input type="checkbox" name="groepDo" id="groepDo" value="1"> Donderdag 24 Augustus
 					</label>
-					<input type="text" class="form-control input-sm" name="voorkeur" id="voorkeur" disabled="">
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-12">
-				<div class="checkbox checkbox--withinput" style="width: 50%;">
-					<label for="daghulp">
-						<input type="checkbox" name="daghulp" id="daghulp" value="1"> Samen met andere opgegeven daghulp, namelijk: 
-					</label>
-					<input type="text" class="form-control input-sm" name="daghulpsamenmet" id="daghulpsamenmet" disabled="">
 				</div>
 			</div>
 		</div>

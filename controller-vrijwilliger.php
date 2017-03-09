@@ -1,7 +1,11 @@
 <?php
 	session_start();
-	$temp = $_SESSION['POST'];
-	unset($_SESSION['POST']);
+	if( isset($_SESSION['POST']) ){
+		$temp = $_SESSION['POST'];
+		unset($_SESSION['POST']);
+	} else {
+		$temp = false;
+	}
 
 	// print "<pre>"; print_r($temp['namechild']); print "</pre>";
 	// print "<pre>"; print_r($_POST); print "</pre>"; exit;
@@ -22,24 +26,88 @@
 	$phone = $_POST['phone']; 
 	$email = $_POST['email']; 
 
-	$groepOnderbouw = $_POST['groepOnderbouw']; 
-	$groepBovenbouw = $_POST['groepBovenbouw']; 
-	$overnachten = $_POST['overnachten']; 
+	if( isset($_POST['groepOnderbouw']) ){
+		$groepOnderbouw = $_POST['groepOnderbouw']; 
+	} else {
+		$groepOnderbouw = 0; 
+	}
 
-	$metEigenKind = $_POST['metEigenKind']; 
+	if( isset($_POST['groepBovenbouw']) ){	
+		$groepBovenbouw = $_POST['groepBovenbouw']; 
+	} else {
+		$groepBovenbouw = 0; 
+	}
+
+	if( isset($_POST['overnachten']) ){	
+		$overnachten = $_POST['overnachten']; 
+	} else {
+		$overnachten = 0; 		
+	}
+
+	if ( isset($_POST['metEigenKind']) ){
+		$metEigenKind = $_POST['metEigenKind'];
+	} else {
+		$metEigenKind = 0;
+	}
 	$metEigenKindNaam = $temp['namechild']; 
 
-	$leidingsamenmet = $_POST['leidingsamenmet']; 
+	if ( isset($_POST['leidingsamenmet']) ){
+		$leidingsamenmet = $_POST['leidingsamenmet']; 
+	} else {
+		$leidingsamenmet = 0;
+	}
 
-	$dag1 = $_POST['dag1']; 
-	$dag2 = $_POST['dag2']; 
-	$dag3 = $_POST['dag3']; 
+	if( isset($_POST['dagMa']) ){
+		$dagMa = $_POST['dagMa'];
+	} else {
+		$dagMa = 0;
+	} 
+	if( isset($_POST['dagDi']) ){
+		$dagDi = $_POST['dagDi'];
+	} else {
+		$dagDi = 0;
+	} 
+	if( isset($_POST['dagDiAaf']) ){
+		$dagDiAaf = $_POST['dagDiAaf'];
+	} else {
+		$dagDiAaf = 0;
+	} 
+	if( isset($_POST['dagWo']) ){
+		$dagWo = $_POST['dagWo'];
+	} else {
+		$dagWo = 0;
+	} 
+	if( isset($_POST['dagDo']) ){
+		$dagDo = $_POST['dagDo'];
+	} else {
+		$dagDo = 0;
+	} 
+	if( isset($_POST['dagVr']) ){
+		$dagVr = $_POST['dagVr'];
+	} else {
+		$dagVr = 0;
+	} 
 
-	$creatiefspel = $_POST['creatiefspel']; 
-	$sportiefspel = $_POST['sportiefspel']; 
-	$spelgeenvoorkeur= $_POST['spelgeenvoorkeur']; 
-	$anderevoorkeur = $_POST['voorkeur']; 
-	$daghulpsamenmet = $_POST['daghulpsamenmet']; 
+	if ( isset($_POST['groepDi']) ){
+		$groepDi = $_POST['groepDi'];
+	} else {
+		$groepDi = 0;
+	} 
+	if ( isset($_POST['groepDiAaf']) ){
+		$groepDiAaf = $_POST['groepDiAaf'];
+	} else {
+		$groepDiAaf = 0;
+	} 
+	if ( isset($_POST['groepWo']) ){
+		$groepWo = $_POST['groepWo'];
+	} else {
+		$groepWo = 0;
+	} 
+	if ( isset($_POST['groepDo']) ){
+		$groepDo = $_POST['groepDo'];
+	} else {
+		$groepDo = 0;
+	} 
 
 	$db_host = 'localhost';
 	$db_username = 'j3d_user';
@@ -75,14 +143,16 @@
 					`metEigenKind`,
 					`metEigenKindNaam`, 
 					`leidingsamenmet`, 
-					`dag1`, 
-					`dag2`, 
-					`dag3`, 
-					`creatiefspel`, 
-					`sportiefspel`, 
-					`spelgeenvoorkeur`, 
-					`anderevoorkeur`, 
-					`daghulpsamenmet`
+					`dagMa`, 
+					`dagDi`, 
+					`dagDiAaf`, 
+					`dagWo`, 
+					`dagDo`, 
+					`dagVr`, 
+					`groepDi`, 
+					`groepDiAaf`, 
+					`groepWo`,
+					`groepDo`
 				) VALUES (
 					'" . $name . "', 
 					'" . $adres . "', 
@@ -94,14 +164,16 @@
 					'" . $metEigenKind . "', 
 					'" . $metEigenKindNaam ."', 
 					'" . $leidingsamenmet . "',
-					'" . $dag1 . "',
-					'" . $dag2 . "',
-					'" . $dag3 . "',
-					'" . $creatiefspel . "',
-					'" . $sportiefspel . "',
-					'" . $spelgeenvoorkeur . "',
-					'" . $anderevoorkeur . "',
-					'" . $daghulpsamenmet . "'
+					'" . $dagMa . "',
+					'" . $dagDi . "',
+					'" . $dagDiAaf . "',
+					'" . $dagWo . "',
+					'" . $dagDo . "',
+					'" . $dagVr . "',
+					'" . $groepDi . "',
+					'" . $groepDiAaf . "',
+					'" . $groepWo . "',
+					'" . $groepDo . "'
 				);";
 	// echo $sql;
 	$mysqli->query($sql);

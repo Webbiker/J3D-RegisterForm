@@ -150,21 +150,30 @@ $(document).on('click', '#leidingsamen', function(){
 	}
 })
 
-$(document).on('click', '#anderevoorkeur', function(){
-	if ( $("#anderevoorkeur").is(':checked')==true) {
-		$('#voorkeur').removeAttr('disabled');
-	} else {
-		$('#voorkeur').prop('disabled','disabled');
-	}
-})
+$(document).on('click', '#dagdelen input', checkBoxes);
 
-$(document).on('click', '#daghulp', function(){
-	if ( $("#daghulp").is(':checked')==true) {
-		$('#daghulpsamenmet').removeAttr('disabled');
-	} else {
-		$('#daghulpsamenmet').prop('disabled','disabled');
+function checkBoxes(){
+	var checksDay = new Array(['dagDi'],['dagDiAaf'],['dagWo'],['dagDo']);
+	var checksGroup = new Array(['groepDi'],['groepDiAaf'],['groepWo'],['groepDo']);
+
+	for(i=0; i<checksDay.length; i++){
+		console.log('i: '+checksDay.length);
+		if ( $( '#'+checksDay[i] ).is(':checked')==true) {
+			console.log('check: '+checksDay[i]);
+			$( '#'+checksGroup[i] ).prop('disabled','disabled').parent().addClass('disabled');
+		} else {
+			$( '#'+checksGroup[i] ).removeAttr('disabled').parent().removeClass('disabled');
+		}
 	}
-})
+
+	for(i=0; i<checksGroup.length; i++){
+		if ( $( '#'+checksGroup[i] ).is(':checked')==true) {
+			$( '#'+checksDay[i] ).prop('disabled','disabled').parent().addClass('disabled');
+		} else {
+			$( '#'+checksDay[i] ).removeAttr('disabled').parent().removeClass('disabled');
+		}
+	}
+}
 
 function validateHighlight(element, errorClass, validClass){
 	var elemName = $(element).prop("name");
@@ -199,12 +208,6 @@ function fillFormVolenteer(){
 	$("#leidingsamen").attr('checked', true);;
 	$('#leidingsamenmet').removeAttr('disabled');
 
-	$("#anderevoorkeur").attr('checked', true);;
-	$('#voorkeur').removeAttr('disabled');
-
-	$("#daghulp").attr('checked', true);;
-	$('#daghulpsamenmet').removeAttr('disabled');
-
 	$("#name").val("Joost Brommert");
 	$("#age").val("42");
 	$("#adres").val("Helmondseweg 1");
@@ -218,15 +221,12 @@ function fillFormVolenteer(){
 	$("#metEigenKind").attr('checked', true);;
 	$("#leidingsamenmet").val("Nicole van Daal");
 
-	$("#dag1").attr('checked', true);;
-	$("#dag2").attr('checked', true);;
-	$("#dag3").attr('checked', true);;
+	$("#dagMa").attr('checked', true);;
+	$("#groepDi").attr('checked', true);;
+	$("#groepDiAaf").attr('checked', true);;
+	$("#groepWo").attr('checked', true);;
+	$("#groepDo").attr('checked', true);;
+	$("#dagVr").attr('checked', true);;
 
-	$("#creatiefspel").attr('checked', true);;
-	$("#sportiefspel").attr('checked', true);;
-	$("#spelgeenvoorkeur").attr('checked', true);;
-	$("#geenvoorkeur").attr('checked', true);;
-	$("#voorkeur").val("Keuken");
-
-	$("#daghulpsamenmet").val("Nicole van Daal");
+	checkBoxes();
 }
