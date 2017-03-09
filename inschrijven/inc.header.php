@@ -9,7 +9,7 @@
 
 		<!-- Bootstrap -->
 		<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-		<link href="/assets/css/screen.css" rel="stylesheet">
+		<link href="/assets/css/screen-form.css" rel="stylesheet">
 
 		<link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon" />
 

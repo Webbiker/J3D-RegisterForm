@@ -1,0 +1,11 @@
+.header { 
+	flex: 0 0 550px;
+	min-height: 550px;
+	background-image:
+		url(/assets/img/header_bground.png),
+		linear-gradient(to bottom, rgba(#FBFEFF,1) 0%, rgba($bluelight,1) 100%);
+	background-position: bottom center;
+	background-size: cover;
+	background-blend-mode: screen;
+	box-shadow: inset 0 -10px 20px rgba($blue, 0.4);
+}

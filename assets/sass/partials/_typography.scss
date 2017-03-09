@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Open+Sans:400,700');
+
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: $normal;
+    line-height: 1.4;
+    color: $bluedark;
+}
+
+a {
+    // color: $dgreen;
+    text-decoration: none;
+    transition: all ease-in $speed;
+    &:hover {
+        // color: $lgreen;
+        transition: all ease-in $speed;
+    }
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Luckiest Guy', cursive;
+}
+
+h1 {
+    @include font-size(36px);
+    line-height: 1;
+    color: $orange;
+}
+
+p {
+    @include font-size(18px);
+    @include line-height(24px);
+}
+// .main {
+//     line-height: 1.6;
+
+//     h2, h3, h4, p, ul {
+//         margin-left: 20%;
+//         margin-right: 20%;
+//     }
+
+//     h2 {
+//         color: $xdgreen;
+//         @include font-size(24px);
+//     }
+
+//     h3 {
+//         color: $dgreen;
+//         @include font-size($base-font-size);
+//     }
+
+//     h4 {
+//         color: $black;
+//         @include font-size(14px);
+//     }
+
+//     p {
+//         @include font-size($base-font-size);
+//         margin-bottom: 24px;
+//     }
+
+//     blockquote {
+//         float: left;
+//         font-family: homestead, sans-serif;
+//         @include font-size(24px);
+//         @include line-height(24px);
+//         margin: 6px 24px 24px 10%;
+//         border-style: solid;
+//         border-width: 12px 0;
+//         border-image: url('/assets/img/gui/grid-pattern.png') 24 fill repeat;
+
+//         padding: 12px 0;
+//         text-transform: uppercase;
+//         color: $dgreen;
+//         max-width: 300px;
+
+//     }
+
+//     strong,
+//     b {
+//         font-family: 'Roboto', sans-serif;
+//         font-weight: 700;
+//     }
+
+//     p:first-of-type:first-letter {
+//         font-family: homestead, sans-serif;
+//         border-bottom: 4px solid $dgreen;
+//         color: $lgreen;
+//         @include font-size(60px); //4rem
+//         @include line-height(58px);
+//         float: left;
+//         margin: 9px 10px 0px 0;
+//         padding: 6px 10px 0 13px;
+//         background: $dgreen;
+//         display: block;
+//         border-radius: 4px;
+//         text-align: center;
+//     }
+
+//     img { 
+//         width: 100%;
+//         height: auto;
+//         border-radius: 8px;
+//     }
+// }
+
+// @media #{$medium-only} {
+//     h1 {
+//         margin:0 10% 60px 10%;
+//     }
+//     .main {
+//         h2, h3, h4, p, ul {
+//             margin-left: 10%;
+//             margin-right: 10%;
+//         }
+//         blockquote {
+//             margin: 6px 30px 24px 10%;
+//         }
+//     }
+// }
+
+// @media #{$small-only} {
+//     h1 {
+//         margin:0 20px 40px 20px;
+//         @include font-size(23px);
+//         padding-left: 78px;
+//         max-width: $max-width - 80px;
+//         small {
+//             font-size: rem-calc(18);
+//         }
+//         .avatar {
+//             width: 70px;
+//             top: -18px;
+//         }
+//     }
+//     .main {
+//         h2, h3, h4, p, ul {
+//             margin-left: 20px;
+//             margin-right: 20px;
+//         }
+//         blockquote {
+//             float: none;
+//             margin: 0 auto 24px auto;
+//         }
+//     }
+// }

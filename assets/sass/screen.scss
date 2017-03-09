@@ -1,1 +1,26 @@
+@import "partials/reset";
+
+/*-----------------------------------------------------------------------------------/
+/ Dependencies
+/-----------------------------------------------------------------------------------*/
+@import "partials/functions";
+@import "partials/variables";
+@import "partials/mixins";
+// @import "partials/normalize";
+// @import "partials/settings";
+
+/*-----------------------------------------------------------------------------------/
+/ Partials
+/-----------------------------------------------------------------------------------*/
 @import "partials/base";
+@import "partials/typography";
+@import "partials/header";
+@import "partials/main";
+@import "partials/footer";
+// @import "partials/clouds";
+// @import "partials/submenu";
+// @import "partials/mainmenu";
+// @import "partials/buttons";
+// @import "partials/offcanvas";
+// @import "partials/logo";
+// @import "partials/footer";

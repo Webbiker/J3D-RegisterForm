@@ -1,0 +1,14 @@
+.main {
+	flex: 1 0 0;
+	align-self: center;
+	background: $white;
+	max-width: $max-width;
+	width: 100%;
+	border-radius: 0 0 20px 20px;
+	box-shadow: 0 10px 10px $bodycolordark;
+}
+
+.main__article {
+	max-width: $main-width;
+	margin: 65px auto;
+}

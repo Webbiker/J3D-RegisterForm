@@ -29,7 +29,10 @@ module.exports = function(grunt) {
         ]
       },
       dist: {
-        src: 'assets/css/screen.css'
+        src: [
+          'assets/css/screen.css',
+          'assets/css/screen-form.css'
+        ]
       }
     },
 
@@ -39,7 +42,8 @@ module.exports = function(grunt) {
           style: 'compressed'            // nested, compact, compressed, expanded
         },
         files: {                         // Dictionary of files
-          'assets/css/screen.css': 'assets/sass/screen.scss'
+          'assets/css/screen.css': 'assets/sass/screen.scss',
+          'assets/css/screen-form.css': 'assets/sass/screen-form.scss'
         }
       }
     },
