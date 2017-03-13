@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="48px" viewBox="0 0 54 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M101,22 L101,24 C101,24.547 100.547,25 100,25 L74,25 C73.453,25 73,24.547 73,24 L73,22 C73,21.453 73.453,21 74,21 L100,21 C100.547,21 101,21.453 101,22 Z M101,16 L101,18 C101,18.547 100.547,19 100,19 L80,19 C79.453,19 79,18.547 79,18 L79,16 C79,15.453 79.453,15 80,15 L100,15 C100.547,15 101,15.453 101,16 Z M101,10 L101,12 C101,12.547 100.547,13 100,13 L76,13 C75.453,13 75,12.547 75,12 L75,10 C75,9.453 75.453,9 76,9 L100,9 C100.547,9 101,9.453 101,10 Z M101,4 L101,6 C101,6.547 100.547,7 100,7 L82,7 C81.453,7 81,6.547 81,6 L81,4 C81,3.453 81.453,3 82,3 L100,3 C100.547,3 101,3.453 101,4 Z" id="path-1"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.71372549   0 0 0 0 0.921568627   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.288655698   0 0 0 0 0.56455189   0 0 0 0 0.886238694  0 0 0 1 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-7" transform="translate(-317.000000, -8.000000)" fill-rule="nonzero">
+            <g id="Header" transform="translate(-10.000000, 0.000000)">
+                <g id="offcanvas-menu" transform="translate(267.000000, 18.000000)">
+                    <g id="Shape">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

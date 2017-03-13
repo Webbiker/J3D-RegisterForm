@@ -6,9 +6,39 @@
 	width: 100%;
 	border-radius: 0 0 20px 20px;
 	box-shadow: 0 10px 10px $bodycolordark;
+	margin: 0 10px;
+	position: relative;
+
+	&:before {
+		content: "";
+		width: 848px;
+		height: 349px;
+		background-image: url(/assets/img/filmstrip.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		position: absolute;
+		bottom: -130px; 
+		left: -48px;
+		z-index: 2;
+	}
 }
 
 .main__article {
 	max-width: $main-width;
-	margin: 65px auto;
+	margin: 65px auto 235px auto;
+
+}
+
+@media #{$medium} {
+	.main {
+		max-width: inherit;
+		width: auto;
+	}
+
+	.main__article {
+		max-width: inherit;
+		width: auto;
+		margin: 40px 20px;
+	}
+
 }

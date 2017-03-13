@@ -9,6 +9,7 @@ module.exports = function(grunt) {
       js: {
         files : {
           'assets/js/build/app.min.js' : [
+            'assets/js/partials/mobmenu.js',
             'assets/js/partials/app.js'
           ]
         }
