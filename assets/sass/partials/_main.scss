@@ -9,24 +9,84 @@
 	margin: 0 10px;
 	position: relative;
 
-	&:before {
-		content: "";
-		width: 848px;
-		height: 349px;
-		background-image: url(/assets/img/filmstrip.png);
-		background-repeat: no-repeat;
-		background-size: 100%;
+}
+
+.main__strip {
+	position: absolute;
+	width: 66%;
+    bottom: -70px;
+    left: -3.8%;
+	z-index: 2;
+
+	img {
+		width: 100%;
+		height: auto;		
+	}
+}
+
+.main__screen {
+	text-align: center;
+	position: relative;
+
+	max-width: 500px;
+    margin: 0 auto 48px auto;
+
+	p {
 		position: absolute;
-		bottom: -130px; 
-		left: -48px;
-		z-index: 2;
+		top: 32%;
+		margin: 0 auto;
+		text-align: center;
+		width: 60%;
+		left: 20%;
+		color: $black;
+		font-weight: $bold;
+
+		strong {
+			line-height: 1.4;
+			display: block;
+			width: 100%;
+			font-family: 'Luckiest Guy', cursive;
+			@include font-size(48px);
+		}
+	}
+
+	img {
+		width: 100%;
+		height: auto;		
 	}
 }
 
 .main__article {
 	max-width: $main-width;
-	margin: 65px auto 235px auto;
+	margin: 65px auto 190px auto;
+}
 
+.main__social {
+	&:before {
+		content: "";
+		width: 100%;
+		height: 6px;
+		background-color: $orange;
+		display: block;
+		border-radius: 3px 0 0 3px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	position: relative;
+	width: 310px;
+	float: right;
+	padding: 18px 0 12px 0;
+
+	li {
+		float: left;
+		margin-right: 12px;
+	}
+	img {
+		width: 48px;
+		height: auto;
+	}
 }
 
 @media #{$medium} {
@@ -35,10 +95,63 @@
 		width: auto;
 	}
 
+	.main:before{
+		 width: 518px;
+	    bottom: -60px;
+	    left: -30px;
+	}
+
 	.main__article {
 		max-width: inherit;
 		width: auto;
-		margin: 40px 20px;
+		margin: 40px 20px 120px 20px;
 	}
 
+}
+
+@media #{$small} {
+	.main__strip {
+		width: 62%;
+	    left: -3.5%;		
+	}
+
+	.main__social {
+		width: 250px;
+	}
+}
+
+@media #{$xsmall-only} {
+	.main__strip {
+		width: 110%;
+		left: -6.2%;
+		bottom: 7%;
+	}
+
+	.main__article {
+		margin: 40px 20px 210px 20px;
+	}
+
+	.main__social {
+		width: 75%;
+		li {
+			margin-right: 6px;
+		    width: 17%;
+		}
+		img {
+			width: 100%;
+		}
+	}
+
+	.main__screen {
+	    margin: 0 auto 24px auto;
+	    max-width: 360px;
+		p {
+			top: 22%;
+			width: 84%;
+			left: 8%;			
+			strong {
+				@include font-size(32px);
+			}
+		}
+	}
 }

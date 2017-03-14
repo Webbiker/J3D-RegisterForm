@@ -14,18 +14,16 @@
 		<div class="wrapper">
 			<header class="header">
 				<nav class="header__nav">
-					<a href="/" class="header__logo"><img src="/assets/img/logo-j3d.svg" alt="Logo Jeugd3Daagse Aarle-Rixtel"></a>
+					<a href="/" class="header__logo"><img src="/assets/svg/logo-j3d.svg" alt="Logo Jeugd3Daagse Aarle-Rixtel"></a>
 					<ul class="header__navlist">
-						<li><a class="header__link" href="javascript:;" id="openMenu">Menu <img src="/assets/img/menu.svg" alt="Menu"></a></li>
-						<!-- <span class="hide">	 -->
+						<li><a class="header__link" href="javascript:;" id="openMenu">Menu <img src="/assets/svg/menu.svg" alt="Menu"></a></li>
 						<li><a class="header__link header__link--active" href="javascript:;">Home</a></li>
 						<li><a class="header__link" href="javascript:;">Programma</a></li>
 						<li><a class="header__link" href="javascript:;">Fotos</a></li>
 						<li><a class="header__link" href="javascript:;">Inschrijven</a></li>
 						<li><a class="header__link" href="javascript:;">Sponsors</a></li>
 						<li><a class="header__link" href="javascript:;">Contact</a></li>
-						<!-- </span> -->
-						<li><a class="header__link" href="javascript:;" id="closeMenu"><img src="/assets/img/close.svg" alt="Menu"></a></a></li>
+						<li><a class="header__link" href="javascript:;" id="closeMenu"><img src="/assets/svg/close.svg" alt="Menu"></a></a></li>
 					</ul>
 				</nav>
 				<div class="header__img"></div>
@@ -33,9 +31,24 @@
 			<main class="main">
 				<article class="main__article">				
 					<h1>Welkom op de site van Jeugd3Daagse Aarle-Rixtel!</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In deleniti culpa ad quod itaque, fugiat, inventore minus, natus animi maiores quia consequatur ab deserunt tenetur sunt necessitatibus qui ut. Voluptatibus, doloremque! Perspiciatis illo sunt provident, harum quo, nisi doloremque quibusdam blanditiis dignissimos facilis laudantium, id? Nesciunt, sequi, necessitatibus.</p>
-<!-- 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nihil iure voluptatum saepe corporis qui quas, fuga laboriosam porro ab libero consectetur repellendus aut iusto et tempore praesentium velit quia minus facere cum enim facilis, quam omnis. Placeat fugiat similique ea quod debitis ipsum reiciendis cum quaerat sapiente! Illo quas earum reiciendis. Odit aliquam officiis consequatur, suscipit repellendus minima id amet eius rerum illo! Reprehenderit, modi. Repellat vero voluptates obcaecati sed nobis tempora doloribus quia debitis corporis, eligendi nam a officiis nisi. Earum, alias, quidem. Nisi quam aperiam deserunt totam consequuntur id, magni recusandae beatae sapiente asperiores veritatis ducimus. Aspernatur voluptate, est esse ratione, praesentium dolores provident reiciendis iste ullam, sit qui repudiandae enim possimus hic consectetur saepe quae corporis. Impedit modi, exercitationem eum commodi ullam ab eaque qui nisi et! Fugiat iste officiis rerum quasi omnis quibusdam sed blanditiis dolorem atque quod impedit delectus assumenda ipsum, saepe explicabo voluptatem temporibus consectetur molestiae, nihil accusantium corporis quidem vero non! Temporibus quia, consequuntur deserunt perferendis dolores velit obcaecati amet veritatis dolorum corporis, asperiores quasi itaque illo, facere quisquam rem fuga labore nihil voluptatibus, voluptates? Labore nulla facere, aliquid tempora autem neque nobis nisi soluta velit perspiciatis vel temporibus doloremque esse similique, eius vitae excepturi, officiis modi atque. Magnam voluptatum quod voluptates minima, inventore suscipit ab aliquam consequuntur illum veritatis sapiente et consequatur, accusamus consectetur rem unde tempore soluta, natus eius debitis nisi expedita ut! Nisi alias ea dicta illum laborum libero error in ducimus repudiandae eius similique, porro a unde rerum iusto minima. Ullam rem ipsa, officiis! Eum delectus autem, non velit quas illo molestiae maiores dolores in officiis aperiam dignissimos architecto quasi ipsa, illum ea ipsum! Non illum in totam, possimus ex, culpa, natus illo incidunt rerum expedita quaerat, inventore dignissimos? Officiis corrupti optio, nesciunt reiciendis eaque fugiat in impedit.</p> -->
+					<p class="center"><strong>Dit jaar vindt de Jeugd3Daagse plaats van dinsdag 22 t/m donderdag 24 augustus 2017.</strong></p>
+					<p>De Jeugd3Daagse Aarle-Rixtel is een begrip in Aarle-Rixtel. Al meer dan 30 jaar bezorgen we tijdens de laatste week van de zomervakantie de basisschooljeugd een drietal onvergetelijke dagen door middel van sport en spel. Dit gebeurt allemaal in en om het grasveld bij multifunctioneel centrum De Dreef.</p>
+					<p>Een team van ruim 20 enthousiaste vrijwilligers organiseert de Jeugd3Daagse ieder jaar weer. Zij worden begeleid door tientallen andere vrijwilligers (volwassenen en jongeren) die de jeugd van Aarle-Rixtel een warm hart toedragen. Wij zijn er trots op dat we ieder jaar weer zo’n mooi evenement voor de kinderen van Aarle-Rixtel neer mogen zetten!</p>
+					<div class="main__screen">
+						<p>Dit jaar is het thema van de Jeugd3Daagse
+						<strong>@THE MOVIES</strong></p>
+						<img src="/assets/img/movie-screen.png">
+					</div>
+					<p>Wil jij moves maken als een echt stuntman? Of de show stelen over de rode loper? Droom jij om als Harry Potter of Elsa te kunnen toveren of als een echt Jack Sparrow de piraat uit te hangen? Dit jaar is dat mogelijk!</p>
+					<p class="center"><a href="javascript:;"><img src="/assets/svg/button--subscribe.svg" alt="Schrijf je nu in!"></a></p>
 				</article>
+				<ul class="main__social">
+					<li><a href="javascript:;"><img src="/assets/svg/facebook-square.svg" alt="J3d op Facebook"></a></li>
+					<li><a href="javascript:;"><img src="/assets/svg/instagram.svg" alt="J3d op Instagram"></a></li>
+					<li><a href="javascript:;"><img src="/assets/svg/youtube-square.svg" alt="J3d op YouTube"></a></li>
+					<li><a href="javascript:;"><img src="/assets/svg/facebook-square.svg" alt="J3d op Twitter"></a></li>
+				</ul>
+				<div class="main__strip"><img src="/assets/img/filmstrip.png"></div>
 			</main>
 			<footer class="footer">
 				<ul class="footer__copy">

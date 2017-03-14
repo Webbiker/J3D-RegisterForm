@@ -12,4 +12,17 @@ body {
 	flex-wrap: nowrap;
 	min-height: 100vh;
 	position: relative;
+	overflow: hidden;
+}
+
+@media #{$xxlarge}{
+	.wrapper {
+		padding: 0 10px;
+	}
+}
+
+@media #{$medium}{
+	.wrapper {
+		padding: 0;
+	}
 }

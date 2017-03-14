@@ -21,7 +21,6 @@ var stickyHeader = function(){
 	// behaviour of the main navigation on scroll
 	// var height = $(window).scrollTop();
 	var height = $('body').scrollTop();
-	console.log('height: '+height);
 	if(height  > 160) {
 		$('#closeMenu').css('opacity', 0);
 	} else {
